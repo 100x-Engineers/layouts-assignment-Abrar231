@@ -21,4 +21,20 @@ Figma Design - https://www.figma.com/file/w7wN1934wsRWZAMhPU0IEX/100x-microblogg
 
 Designs will be reviewed for visual appeal, layout sensibility, and responsive design principles.
 
+## Deployment Links
+
+Below are the deployment links for different screens
+
+1. Login Screens:
+https://100x-engineers.github.io/layouts-assignment-Abrar231/src/login/index.html
+
+2. Home Feed:
+https://100x-engineers.github.io/layouts-assignment-Abrar231/src/home-feed/index.html
+
+3. Compose Tweet:
+https://100x-engineers.github.io/layouts-assignment-Abrar231/src/compose-tweet/index.html
+
+4. User Profile:
+https://100x-engineers.github.io/layouts-assignment-Abrar231/src/user-profile/index.html
+
 ---
