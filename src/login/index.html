@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body>
+    <div class="bg-black w-390 h-868 shrink-0 font-inter flex justify-center flex-col">
+        <div class="absolute top-0">
+            <div class="flex w-390 h-11 pt-3.5 pr-[14.5px] pb-3 pl-5 justify-end items-center gap-[234.606px] shrink-0">
+                <span class="text-neutral-50 ">
+                    9:41
+                </span>
+                <img src="/public/images/login-container.svg" alt="">
+            </div>
+            <div class="flex w-390 py-3 px-4 justify-center items-baseline">
+                <img class="w-10 h-[18px]" src="/public/images/login-100.svg" alt="">
+                <img class="h-[13px] w-3 " src="/public/images/login-x.svg" alt="">
+            </div>
+        </div>
+        <div class="flex w-390 py-0 px-7 flex-col items-start gap-10">
+            <div class="flex flex-col items-start gap-3 self-stretch">
+                <div class="self-stretch text-neutral-50 text-[31px] font-extrabold">Happening Now</div>
+                <div class="text-neutral-50 font-medium clig-liga-off">Join today.</div>
+            </div>
+            <!-- Component - Create account -->
+            <a class="flex justify-center items-center gap-2.5 self-stretch py-2 px-6 bg-neutral-50 hover:bg-neutral-200 rounded-[65px] shadow-lg backdrop-blur-xl" href="/src/login/create-account-step-1.html">
+                <div class="text-neutral-1000 text-center text-base font-bold">
+                    Create account
+                </div>
+            </a>
+            <div class="flex justify-center items-center gap-1 self-stretch text-neutral-50 before:bg-neutral-700 after:bg-neutral-700 before:h-px after:h-px before:w-full after:w-full">
+                or
+            </div>
+            <div class="flex flex-col items-start gap-5 self-stretch">
+                <div class="text-neutral-50 font-[15px] ">
+                    Already have an account?
+                </div>
+                <!-- Component - Sign in -->
+                <button class="flex justify-center items-center gap-2.5 self-stretch py-2 px-6 border border-stroke rounded-[65px] shadow-lg backdrop-blur-xl">
+                    <div class="text-twitter-blue text-center text-base font-bold">
+                        Sign up
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

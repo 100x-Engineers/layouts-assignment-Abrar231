@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.clig-liga-off{
+    font-feature-settings: 'clig' off, 'liga' off;;
+}
