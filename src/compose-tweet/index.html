@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose Tweet</title>
+    <link rel="stylesheet" href="/layouts-assignment-Abrar231/dist/output.css">
+</head>
+<body>
+    <div class="bg-black w-390 h-868 shrink-0 relative">
+        <!-- Notif -->
+        <div class="flex w-390 h-11 pt-3.5 pr-[14.5px] pb-3 pl-5 justify-end items-center gap-[234.606px] shrink-0">
+            <span class="text-neutral-50 ">
+                9:41
+            </span>
+            <img src="/layouts-assignment-Abrar231/public/images/login-container.svg" alt="">
+        </div>
+        <div class="flex w-390 py-3 px-4 justify-between items-center">
+            <img src="/layouts-assignment-Abrar231/public/images/create-account-1-signup-x.svg" alt="">
+            <!-- Post Button -->
+            <button class="flex py-2 px-6 justify-center items-center gap-2.5 rounded-[30px] bg-twitter-blue-disabled shadow-lg shadow-black/25 backdrop-blur-xl">
+                <div class="text-neutral-400 text-center text-sm font-bold">
+                    Post
+                </div>
+            </button>
+        </div>
+        <!-- What's happening Input Component -->
+        <div class="flex w-390 py-2 px-4 items-start gap-3">
+            <img class="shrink-0 rounded-[200px]" src="/layouts-assignment-Abrar231/public/images/user-avatar.png" alt="user avatar">
+            <!-- <input class="flex items-center self-stretch w-full bg-black text-neutral-50 placeholder:text-neutral-600  focus:outline-none caret-twitter-blue invalid:bg-red-500" type="text" placeholder="What's happening?!" pattern=".{0, 280}"> -->
+            <div class="w-full">
+                <span class="text-white absolute" id="placeholder">What's happening?!</span>
+                <div id="tweet-content" contenteditable="true" class="text-white focus:outline-none placeholder:text-neutral-600 self-stretch w-full caret-twitter-blue ">
+                </div>
+            </div>
+        </div>
+        <div id="characters" class="flex w-390 py-3 px-4 items-center gap-5 border-t border-t-neutral-800 text-neutral-500 text-sm absolute bottom-0">
+            0/280
+        </div>
+    </div>
+    <script>
+        const placeholder = document.querySelector('#placeholder');
+        const tweetContent = document.querySelector('#tweet-content');
+        const characters = document.querySelector('#characters');
+        const maxLength = 280;
+        tweetContent.addEventListener("input", () => {
+            const content = tweetContent.textContent.trim();
+            let len = content.length
+            if(len === 0){
+                placeholder.classList.remove("hidden")
+            } else {
+                placeholder.classList.add("hidden")
+            }
+            const selection = window.getSelection();
+            const cursorPosition = selection.getRangeAt(0).endOffset;
+            if(len > maxLength){
+                len = maxLength - len
+
+                let exceededText = content.slice(maxLength)
+                let notExceededText = content.slice(0, maxLength)
+                tweetContent.innerHTML = notExceededText + `<span class="bg-red-500">${exceededText}</span>`
+                selection.setPosition(tweetContent.innerHTML, cursorPosition);
+            }
+            characters.textContent = `${len}/${maxLength}`
+        })
+    </script>
+</body>
+</html>
