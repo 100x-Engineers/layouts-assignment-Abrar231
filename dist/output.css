@@ -987,6 +987,10 @@ video {
   background-image: url('/public/images/profile-user-avatar.png');
 }
 
+.bg-\[url\(\'\/layouts-assignment-Abrar231\/public\/images\/profile-user-avatar\.png\'\)\] {
+  background-image: url('/layouts-assignment-Abrar231/public/images/profile-user-avatar.png');
+}
+
 .bg-cover {
   background-size: cover;
 }

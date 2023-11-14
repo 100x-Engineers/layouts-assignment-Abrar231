@@ -53,22 +53,12 @@
             }
             const selection = window.getSelection();
             const cursorPosition = selection.getRangeAt(0).endOffset;
-            console.log(cursorPosition)
             if(len > maxLength){
-                // let overtext = content.slice(maxLength)
-                // // overtext = `<span class="bg-red-500">${overtext}</span>`
-                // let span = document.createElement('span')
-                // let textNode = document.createTextNode(overtext)
-                // span.classList.add("bg-red-500")
-                // span.appendChild(textNode)
                 len = maxLength - len
-                // tweetContent.textContent = content.slice(0, maxLength)
-                // tweetContent.appendChild(span)
 
                 let exceededText = content.slice(maxLength)
                 let notExceededText = content.slice(0, maxLength)
                 tweetContent.innerHTML = notExceededText + `<span class="bg-red-500">${exceededText}</span>`
-                // console.log(tweetContent.firstChild)
                 selection.setPosition(tweetContent.innerHTML, cursorPosition);
             }
             characters.textContent = `${len}/${maxLength}`
